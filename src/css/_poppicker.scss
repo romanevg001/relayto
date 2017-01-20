@@ -1,0 +1,44 @@
+.popPicker {
+    .md-title {
+        padding-left: 1em;
+    }
+    md-dialog-content {
+        padding-top: 1em;
+    }
+    .popPicker_more-btn {
+        margin: auto;
+        display: block;
+    }
+    .form_textField {
+        width: 99%;
+    }
+    .textField {
+        outline: 0 solid;
+        border: 0 solid;
+        width: 99%;
+        padding: .3em;
+    }
+    
+    .table {
+        border-top: 1px dotted #aaa;
+        
+    }
+    .table_td {
+        padding: .5em;
+        text-align: center;
+        border-right: 1px dotted #aaa;
+        border-bottom: 1px dotted #aaa;
+        cursor: pointer;
+        outline: 0 solid;
+    }
+    .table_font-name {
+        color: #777;
+    }
+    .table_td_active {
+        background: rgb(0,113,243);
+        color: #fff;
+        .table_font-name {
+        color: #fff;
+        }
+    }
+}

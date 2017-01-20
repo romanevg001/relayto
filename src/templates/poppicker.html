@@ -1,0 +1,50 @@
+ <md-dialog aria-label="List dialog" class="popPicker">
+
+  <md-dialog-content>
+      
+      <h3 class="md-title">Cross-platform fonts</h3>
+      <div layout="row" class="table" layout-wrap>
+          <div  ng-repeat="font in crossPlFonts" class="table_td" flex="25" ng-click="chooseFont(font)" ng-class="{'table_td_active':font == choseFont}">
+            
+              <div style="font-family: {{font}};" class="md-display-1">{{defaultText}}</div>
+            <small class="table_font-name">{{font}}</small> 
+          </div>
+        </div>
+
+      <h3 class="md-title">Most popular fonts</h3>
+        <div layout="row" class="table" layout-wrap>
+          <div  ng-repeat="font in itemsFonts" class="table_td" flex="25" ng-click="chooseFont(font.family);" ng-class="{'table_td_active':font.family == choseFont}">
+              <style>
+                  @font-face {
+                      font-family: '{{font.family}}';
+                      src:  url({{font.files.regular}})  format('truetype');
+                      font-weight: normal;
+                      font-style: normal;
+                  }
+              </style>
+              <div style="font-family: {{font.family}}" class="md-display-1">{{defaultText}}</div>
+            <small class="table_font-name">{{font.family}}</small> 
+          </div>
+        </div>
+        <md-button ng-click="getMoreFonts()" class="md-primary popPicker_more-btn">
+          get more ...
+        </md-button>
+
+        <div class="errors" ng-if="errors">
+            <div class="error" ng-repeat="err in errors"><span>{{err.message}} {{err.reason}}</span></div>
+        </div>
+  </md-dialog-content>
+
+  <md-dialog-actions>
+      <form class="form_textField">
+          <input type="text" class="md-display-1 textField" style="font-family: {{choseFont}}" value="Some text" >
+      </form>
+  </md-dialog-actions>
+
+  <md-dialog-actions>
+    <md-button ng-click="closeDialog()" class="md-primary">
+      Close Dialog
+    </md-button>
+  </md-dialog-actions>
+
+</md-dialog>
