@@ -28,7 +28,7 @@
             $scope.itemsFonts = items.slice(0,countOfFonts);
           },function(res){
               $scope.errors = res.data.error.errors;
-            console.log(res)
+
           })
       }
       getFonts();

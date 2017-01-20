@@ -17,7 +17,7 @@
               <style>
                   @font-face {
                       font-family: '{{font.family}}';
-                      src:  url({{font.files.regular}})  format('truetype');
+                      src:  url({{font.files.regular | httpFilter}})  format('truetype');
                       font-weight: normal;
                       font-style: normal;
                   }
