@@ -1,4 +1,4 @@
-# simply
+# relayto
 
 ## Install
 ```bash
