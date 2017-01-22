@@ -18,3 +18,4 @@ import "./js/services/httpFilter"
 import "./js/controllers/fontPickerCtr"
 import "./js/controllers/homeCtr"
 
+console.log('test')

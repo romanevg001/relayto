@@ -73,6 +73,8 @@
 	__webpack_require__(17);
 	
 	__webpack_require__(18);
+	
+	console.log('test');
 
 /***/ },
 /* 1 */
