@@ -45,7 +45,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	"use string";
 	
 	__webpack_require__(1);
 	
@@ -72,6 +71,8 @@
 	__webpack_require__(16);
 	
 	__webpack_require__(17);
+	
+	__webpack_require__(18);
 
 /***/ },
 /* 1 */
@@ -77253,6 +77254,25 @@
 
 	'use strict';
 	
+	(function () {
+	    'use strict';
+	
+	    angular.module('relayto').filter("httpFilter", httpFilter);
+	
+	    function httpFilter() {
+	        return function (val) {
+	            if (val == undefined) return;
+	            return val.slice(5);
+	        };
+	    }
+	})();
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
 	(function (angular, undefined) {
 	    "use strict";
 	
@@ -77296,7 +77316,7 @@
 	})(angular);
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
