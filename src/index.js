@@ -12,10 +12,12 @@ import  "./../node_modules/angular-material/angular-material"
 
 
 
-import "./js/app"
-import "./js/services/apiGoogleFont"
-import "./js/services/httpFilter"
-import "./js/controllers/fontPickerCtr"
-import "./js/controllers/homeCtr"
+import "./app"
+import "./main/main.controller"
 
-console.log('test')
+import "./fontpicker/index"
+import "./fontpicker/apiGoogleFont"
+import "./fontpicker/font.picker.controller"
+
+import "./services/urlHttpFilter"
+

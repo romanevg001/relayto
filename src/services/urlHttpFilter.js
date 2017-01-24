@@ -3,9 +3,9 @@
 
     angular
         .module('relayto')
-        .filter("httpFilter", httpFilter);
+        .filter("urlHttpFilter", urlHttpFilter);
     
-    function httpFilter (){
+    function urlHttpFilter (){
        return function(val) {
            if(val == undefined) return;
            return val.slice(5);

@@ -3,19 +3,20 @@
 
 angular
 .module('relayto')
-.controller('homeCtr', homeCtr);
+.controller('mainController', mainController);
 
- function homeCtr ($scope, $mdDialog){
+ function mainController ($mdDialog){
 
-    $scope.showDialog = showDialog;
+    this.showDialog = showDialog;
   
     function showDialog($event) {
        var parentEl = angular.element(document.body);
        $mdDialog.show({
          parent: parentEl,
          targetEvent: $event,
-         templateUrl:'./src/templates/poppicker.html',
-         controller: 'FontPickerCtrl'
+        controllerAs: 'ctrl',
+         templateUrl:'./src/fontpicker/fontpicker.html',
+         controller: 'FontPickerController'
       });
 
     }

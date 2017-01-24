@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('relayto')
+        .module('app.fontpicker')
         .service("apiGoogleFont", apiGoogleFont);
     
     function apiGoogleFont ($http, api){

@@ -6,7 +6,8 @@
        'ui.router',
        'ngSanitize',
        'ngAria',
-       'ngMaterial'
+       'ngMaterial',
+       'app.fontpicker'
     ])
 
 
@@ -17,7 +18,9 @@
 
   
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(configure);
+    
+    function configure($stateProvider, $urlRouterProvider) {
 
   //      $locationProvider.html5Mode(false).hashPrefix('!');
 
@@ -27,14 +30,19 @@
         $stateProvider
             .state('home', {
                 url: "/",
-                templateUrl: "./src/templates/home.html",
-                controller: 'homeCtr'
+                templateUrl: "./src/main/main.html",
+                controller: 'mainController',
+                controllerAs: 'ctrl'
+
             })
            
             $urlRouterProvider.otherwise('/');
-    })
+    }
 
 
+
+    // configure.$inject =
+    //     ['$stateProvider', '$urlRouterProvider', '$mdDialog'];
 
     // i8App.config(['$httpProvider', '$urlMatcherFactoryProvider', function ($httpProvider, $urlMatcherFactoryProvider) {
     //     $httpProvider.defaults.withCredentials = true;

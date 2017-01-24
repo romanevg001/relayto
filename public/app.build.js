@@ -77291,6 +77291,8 @@
 	        $scope.closeDialog = closeDialog;
 	        $scope.getMoreFonts = getMoreFonts;
 	
+	        this.ff = 8;
+	
 	        function getFonts() {
 	            apiGoogleFont.getFonts().then(function (res) {
 	                var items = res.data.items;
