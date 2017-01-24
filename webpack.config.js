@@ -20,11 +20,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude:  /node_modules/,
-                loader: "babel",
-                query: {
-                    presets: ['es2015'],
-                    compact: false
-                }
+                loaders: ['ng-annotate-loader',"babel?presets[]=es2015"]
+               
 
             },
             {
@@ -43,6 +40,6 @@ module.exports = {
     },
     
     plugins: [
-   //     new webpack.optimize.UglifyJsPlugin()
+       new webpack.optimize.UglifyJsPlugin()
     ]
 };

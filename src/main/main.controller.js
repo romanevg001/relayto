@@ -5,6 +5,7 @@ angular
 .module('relayto')
 .controller('mainController', mainController);
 
+/* @ngInject */
  function mainController ($mdDialog){
 
     this.showDialog = showDialog;

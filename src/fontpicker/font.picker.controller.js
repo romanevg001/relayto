@@ -5,6 +5,7 @@
    .module('app.fontpicker')
    .controller('FontPickerController', FontPickerController);
 
+/* @ngInject */
   function FontPickerController(apiGoogleFont, $mdDialog) {
   
       this.choseFont = 'Arial';
@@ -20,6 +21,7 @@
       this.getMoreFonts = getMoreFonts;
       this.getFonts = getFonts;
       
+      this.getFonts();
 
 
       function getFonts(){
@@ -31,7 +33,6 @@
               this.errors = res.data.error.errors;
           })
       }
-      this.getFonts();
       
 
       function chooseFont (font){

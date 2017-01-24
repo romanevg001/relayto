@@ -41,9 +41,6 @@
 
 
 
-    // configure.$inject =
-    //     ['$stateProvider', '$urlRouterProvider', '$mdDialog'];
-
     // i8App.config(['$httpProvider', '$urlMatcherFactoryProvider', function ($httpProvider, $urlMatcherFactoryProvider) {
     //     $httpProvider.defaults.withCredentials = true;
     //     $httpProvider.defaults.useXDomain = true;
