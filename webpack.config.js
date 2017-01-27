@@ -21,8 +21,6 @@ module.exports = {
                 test: /\.js$/,
                 exclude:  /node_modules/,
                 loaders: ['ng-annotate-loader',"babel?presets[]=es2015"]
-               
-
             },
             {
                 test: /\.html$/,

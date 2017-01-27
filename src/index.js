@@ -13,6 +13,9 @@ import  "./../node_modules/angular-material/angular-material"
 
 
 import "./app"
+import "./exception/extend.exception.handler"
+import "./exception/exception.service"
+
 import "./main/main.controller"
 
 import "./fontpicker/index"
@@ -20,4 +23,5 @@ import "./fontpicker/apiGoogleFont"
 import "./fontpicker/font.picker.controller"
 
 import "./services/urlHttpFilter"
+
 

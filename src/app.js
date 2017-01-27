@@ -7,7 +7,8 @@
        'ngSanitize',
        'ngAria',
        'ngMaterial',
-       'app.fontpicker'
+       'app.fontpicker',
+       'app.exception'
     ])
 
 
